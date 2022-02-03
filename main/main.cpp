@@ -19,11 +19,16 @@ void gotoxy(int x, int y)
 
 int main()
 {
-    int Set[] = { 7,7,7,7,7 }; 
+  
+
+
+
+    int Set[] = { 7,7,7,7 }; 
     int counter = 3;
     char key;
+    bool inLoop = true;
 
-    for (int i = 0;;)
+    while(inLoop!=false)
     {
 
 
@@ -37,6 +42,10 @@ int main()
 
         gotoxy(10, 7);
         color(Set[2]);
+        cout << "               ABOUT US" << endl;
+
+        gotoxy(10, 8);
+        color(Set[3]);
         cout << "               EXIT"<<endl;
 
 
@@ -54,16 +63,23 @@ int main()
         {
             if (counter == 1)
             {
-     
+                inLoop = false;
+                system("CLS");
               
             }
             if (counter == 2)
             {
-                
+                inLoop = false;
+                system("CLS");
+            }
+            if (counter == 4)
+            {
+                return 0;
             }
             if (counter == 3)
             {
-                return 0;
+                inLoop = false;
+                system("CLS");
             }
            
         }
@@ -72,7 +88,7 @@ int main()
         Set[1] = 7;
         Set[2] = 7;
         Set[3] = 7;
-        Set[4] = 7;
+
 
         if (counter == 1)
         {
@@ -90,9 +106,21 @@ int main()
         {
             Set[3] = 12;
         }
-        if (counter == 5)
-        {
-            Set[4] = 12;
-        }
+      
     }
-}
+
+  
+    
+    if (counter == 2)
+    {
+        cout << "1.rules";
+   }
+    if (counter == 3)
+    {
+        cout << "1.about us";
+    }
+
+   
+
+    
+    }
