@@ -1,126 +1,164 @@
 #include <iostream>
 #include <windows.h>
 #include <conio.h>
+#include <stdlib.h>
+#include <iomanip>
+
 
 using namespace std;
 
+// Initializing mazes' sizes for the different difficulties
+
+
 void color(int color)
 {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+	// Change output's colors
+	if (SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color))
+	{
+		return;
+	}
+	else {}
 }
 
-void gotoxy(int x, int y)
+void outputPosition(int x, int y)
 {
-    COORD c;
-    c.X = x;
-    c.Y = y;
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
+	// Set player's fixed position
+	COORD position;
+	position.X = x;
+	position.Y = y;
+	if (SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), position))
+	{
+		return;
+	}
+	else {}
 }
 
+
+
+
+void printOutRules()
+{
+	// Print rules
+}
+void rules()
+{
+	char key;
+	bool exitStatement = true;
+
+	do
+	{
+		printOutRules();
+
+		outputPosition(60, 23);
+		color(14);
+		cout << "BACK TO MAIN MENU";
+
+		key = _getch();
+
+		// Go back to main menu 
+		if (key == '\r')
+		{
+			exitStatement = false;
+
+			system("CLS");
+
+
+
+		}
+
+	} while (exitStatement != false);
+
+}
+
+
+
+
+void mainMenu()
+{
+	int colorNumber[] = { 7, 7, 7, 7 };
+	int counter = 1;
+	char key;
+	bool exitProgram = true;
+
+
+
+
+	while (exitProgram != false)
+	{
+		// Main menu options
+		outputPosition(38, 17);
+		color(colorNumber[0]);
+		cout << "Play"<<endl;
+
+		outputPosition(38, 18);
+		color(colorNumber[1]);
+		cout << "Help"<<endl;
+
+		outputPosition(38, 19);
+		color(colorNumber[2]);
+		cout << "Close";
+
+		key = _getch();
+
+		// Move up through the menu
+		if (key == 'w' && (counter >= 2 && counter <= 5))
+		{
+			counter--;
+		}
+		// Move down through the menu
+		if (key == 's' && (counter >= 1 && counter <= 2))
+		{
+			counter++;
+		}
+		// Select option
+		if (key == '\r')
+		{
+			// Choosing mode option
+			if (counter == 1)
+			{
+				system("CLS");
+
+			}
+
+			// Rules option
+			if (counter == 2)
+			{
+				system("CLS");
+				rules();
+			}
+
+			// Exit option
+			if (counter == 3)
+			{
+				system("CLS");
+				color(7);
+				exit(-1);
+			}
+		}
+
+		// Resset options' color 
+		colorNumber[0] = 7;
+		colorNumber[1] = 7;
+		colorNumber[2] = 7;
+
+		// Change option's color if it is selected
+		if (counter == 1)
+		{
+			colorNumber[0] = 12;
+		}
+		if (counter == 2)
+		{
+			colorNumber[1] = 12;
+		}
+		if (counter == 3)
+		{
+			colorNumber[2] = 12;
+		}
+	}
+}
 int main()
 {
-  
-
-
-
-    int Set[] = { 7,7,7,7 }; 
-    int counter = 3;
-    char key;
-    bool inLoop = true;
-
-    while(inLoop!=false)
-    {
-
-
-        gotoxy(10, 5);
-        color(Set[0]);
-        cout << "               RUN"<<endl;
-
-        gotoxy(10, 6);
-        color(Set[1]);
-        cout << "               HELP"<<endl;
-
-        gotoxy(10, 7);
-        color(Set[2]);
-        cout << "               ABOUT US" << endl;
-
-        gotoxy(10, 8);
-        color(Set[3]);
-        cout << "               EXIT"<<endl;
-
-
-        key = _getch();
-
-        if (key == 72 && (counter >= 2 && counter <= 5))
-        {
-            counter--;
-        }
-        if (key == 80 && (counter >= 1 && counter <= 4))
-        {
-            counter++;
-        }
-        if (key == '\r')
-        {
-            if (counter == 1)
-            {
-                inLoop = false;
-                system("CLS");
-              
-            }
-            if (counter == 2)
-            {
-                inLoop = false;
-                system("CLS");
-            }
-            if (counter == 4)
-            {
-                return 0;
-            }
-            if (counter == 3)
-            {
-                inLoop = false;
-                system("CLS");
-            }
-           
-        }
-
-        Set[0] = 7;
-        Set[1] = 7;
-        Set[2] = 7;
-        Set[3] = 7;
-
-
-        if (counter == 1)
-        {
-            Set[0] = 12;
-        }
-        if (counter == 2)
-        {
-            Set[1] = 12;
-        }
-        if (counter == 3)
-        {
-            Set[2] = 12;
-        }
-        if (counter == 4)
-        {
-            Set[3] = 12;
-        }
-      
-    }
-
-  
-    
-    if (counter == 2)
-    {
-        cout << "1.rules";
-   }
-    if (counter == 3)
-    {
-        cout << "1.about us";
-    }
-
-   
-
-    
-    }
+	mainMenu();
+	rules();
+	printOutRules();
+}
