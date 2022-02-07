@@ -1,7 +1,7 @@
 # Sherlock Homies
 
  <p align = "center">
-  <img width = "526" height = "409" src = "Documents/Logo/SH_Logo.png">
+  <img width = "496" height = "379" src = "Documents/Logo/SH_Logo.png">
  </p>
  
  
@@ -14,13 +14,13 @@
 
 
    ## 💻Technologies💻	
-- Visual Studio: Creating the code
-- GitHub: Sharing our files
-- Microsoft Teams: Communication with the team
-- Microsoft PowerPoint: Making presentation
-- Microsoft Word: Making documentation
-- Microsoft Excel: Making QA documentation
-- Adobe Photoshop: Making logo
+- <b> Visual Studio: </b>  Creating the code
+- <b> GitHub: </b>  Sharing our files
+- <b> Microsoft Teams: </b>  Communication with the team
+- <b> Microsoft PowerPoint: </b>  Making presentation
+- <b> Microsoft Word: </b>  Making documentation
+- <b> Microsoft Excel: </b>  Making QA documentation
+- <b> Adobe Photoshop: </b>  Making logo
 
  
   ## 👥Team members👥    
