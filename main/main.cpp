@@ -4,11 +4,8 @@
 #include <stdlib.h>
 #include <iomanip>
 
-
 using namespace std;
-
 // Initializing mazes' sizes for the different difficulties
-
 
 void color(int color)
 {
@@ -22,7 +19,6 @@ void color(int color)
 
 void outputPosition(int x, int y)
 {
-
 	// Set player's fixed position
 	COORD position;
 	position.X = x;
@@ -60,9 +56,6 @@ void rules()
 			exitStatement = false;
 
 			system("CLS");
-
-
-
 		}
 
 	} while (exitStatement != false);
@@ -79,20 +72,18 @@ void mainMenu()
 	bool exitProgram = true;
 
 
-
-
 	while (exitProgram != false)
 	{
 		// Main menu options
-		outputPosition(43, 16);
+		outputPosition(43, 14);
 		color(colorNumber[0]);
 		cout << "Play"<<endl;
 		
-		outputPosition(43, 18);
+		outputPosition(43, 16);
 		color(colorNumber[1]);
 		cout << "Help"<<endl;
 
-		outputPosition(43, 20);
+		outputPosition(43, 18);
 		color(colorNumber[2]);
 		cout << "Close";
 
