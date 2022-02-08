@@ -22,19 +22,18 @@ void color(int color)
 
 void outputPosition(int x, int y)
 {
+
 	// Set player's fixed position
 	COORD position;
 	position.X = x;
 	position.Y = y;
 	if (SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), position))
 	{
+
 		return;
 	}
 	else {}
 }
-
-
-
 
 void printOutRules()
 {
@@ -51,7 +50,7 @@ void rules()
 
 		outputPosition(60, 23);
 		color(14);
-		cout << "BACK TO MAIN MENU";
+		cout << "BACK TO MAIN MENU"<<endl;
 
 		key = _getch();
 
@@ -72,7 +71,6 @@ void rules()
 
 
 
-
 void mainMenu()
 {
 	int colorNumber[] = { 7, 7, 7, 7 };
@@ -86,17 +84,30 @@ void mainMenu()
 	while (exitProgram != false)
 	{
 		// Main menu options
-		outputPosition(38, 17);
+		outputPosition(43, 16);
 		color(colorNumber[0]);
 		cout << "Play"<<endl;
-
-		outputPosition(38, 18);
+		
+		outputPosition(43, 18);
 		color(colorNumber[1]);
 		cout << "Help"<<endl;
 
-		outputPosition(38, 19);
+		outputPosition(43, 20);
 		color(colorNumber[2]);
 		cout << "Close";
+
+		outputPosition(25, 3);
+		color(colorNumber[3]); 
+		cout << " ___, ,  _,    _   ,_   _,, ,  ___,   , _,"<<endl;
+		outputPosition(25, 4);
+		color(colorNumber[3]);
+		cout << "' | |_|,/_,   '|\\  |_) /  |_|,' | \\  / /_," << endl;
+		outputPosition(25, 5);
+		color(colorNumber[3]);
+		cout << "  |'| |'\\_     |-\\'| \\'\\_'| |  _|_,\\/`'\\_  " << endl;
+		outputPosition(25, 6);
+		color(colorNumber[3]);
+		cout << "  ' ' `   `    '  `'  `  `' ` '    '     ` ";
 
 		key = _getch();
 
