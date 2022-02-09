@@ -18,6 +18,7 @@ void ClearArea() {
 }
 
 int main() {
+
     int year;
     int c = 0;
     int p = 0;
@@ -70,4 +71,79 @@ int main() {
         }
 
 
+
+        else if (year == 681 || year == 855 || year == 864 || year == 1762 || year == 1878 || year == 1870 || year == 1885) {
+            cout << "So there is your year:" << year << endl;
+
+            if (year == 681) {
+                cout << "681 - The first Bulgarian state was created" << endl;
+            }
+
+            if (year == 855) {
+                cout << "855 - Creation of the Slavic alphabet by Cyril and Methodius" << endl;
+            }
+
+            if (year == 864) {
+                cout << "864 - Christianity is accepted as the official religion in Bulgaria" << endl;
+            }
+
+            if (year == 1762) {
+                cout << "1762 - Paisii Hilendarski writes 'Slavo - Bulgarian History'" << endl;
+            }
+
+            if (year == 1878) {
+                cout << "1878 - Bulgaria was liberated from the Ottoman Empire" << endl;
+            }
+
+            if (year == 1870) {
+                cout << "1870 - Bulgaria won an independent Bulgarian church" << endl;
+            }
+
+            if (year == 1885) {
+                cout << "1885 - The unification of Bulgaria and eastern Rumelia " << endl;
+            }
+        }
+
+
+
+        else {
+            cout << "No events have been added to this date" << endl;
+        }
+
+
+
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+
+
+
+        cout << "Do you want to continue? Y/N    Answear:";
+        cin >> ans;
+
+        if (ans == 'Y') {
+            system("CLS");
+
+
+            while (1) {
+                c = 0;
+                switch ((c = _getch())) {
+
+
+                case KEY_UP:
+                    cout << endl << "Edit" << endl;//key up
+                    break;
+
+                case KEY_DOWN:
+                    cout << endl << "Restart" << endl;   // key down
+                    break;
+                }
+            }
+
+
+        }
+
     }
+
+}
