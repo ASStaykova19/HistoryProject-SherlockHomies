@@ -169,7 +169,7 @@ int main() {
             }
 
             cout << endl;
-            cout << "Grey code: " << gray;
+            cout << "Gray code: " << gray;
 
         }
         cout << endl;
