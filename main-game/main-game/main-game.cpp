@@ -1,5 +1,4 @@
-﻿
-#include<iostream>
+﻿#include<iostream>
 #include<iomanip>
 #include<conio.h>
 #include<stdlib.h>
@@ -14,6 +13,92 @@ using namespace std;
 #define KEY_UP 72
 #define KEY_DOWN 80
 
+struct node {
+    int number;
+    node* next;
+};
+
+bool isEmpty(node* head);
+char menu();
+void insertAsFirstElement(node* head, node*& last, int number);
+void insert(node* head, node*& last, int number);
+void remove(node* head, node*& last);
+void showList(node* current);
+
+
+bool isEmpty(node* head) {
+    if (head == NULL) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+char menu() {
+    char choice;
+    cout << "Menu" << endl;
+    cout << "1. Add an item" << endl;
+    cout << "2. Remove an item" << endl;
+    cout << "3. Show the list" << endl;
+    cout << "4. Exit" << endl;
+
+    cin >> choice;
+    return choice;
+}
+
+void insertAsFirstElement(node* head, node*& last, int number) {
+    node* temp = new node;
+    temp->number = number;
+    temp->next = NULL;
+    head = temp;
+    last = temp;
+}
+
+void insert(node* head, node*& last, int number) {
+    if (isEmpty(head)) {
+
+        insertAsFirstElement(head, last, number);
+
+    }
+    else {
+
+        node* temp = new node;
+        temp->number = number;
+        temp->next = NULL;
+        last->next = temp;
+        last = temp;
+    }
+}
+
+void remove(node* head, node*& last) {
+    if (isEmpty(head)) {
+        cout << "The list is already empty" << endl;
+    }
+    else if (head == last) {
+        delete head;
+        head == NULL;
+        last == NULL;
+    }
+    else {
+        node* temp = head;
+        head = head->next;
+        delete temp;
+    }
+}
+
+void showList(node* current) {
+    if (isEmpty(current)) {
+        cout << "The list is empty" << endl;
+    }
+    else {
+        cout << "The list contains: " << endl;
+        while (current != NULL) {
+            cout << current->number << endl;
+            current = current->next;
+        }
+    }
+}
 
 void ClearArea() {
     system("CLS");
@@ -28,7 +113,12 @@ int main() {
     int year;
     int c = 0;
     int p = 0;
-    
+
+    node* head = NULL;
+    node* last = NULL;
+    char choice;
+    int number;
+
     int a[10], n, i;
 
     long long binary, y, b, k = 0, gray = 0;
@@ -185,22 +275,29 @@ int main() {
         if (ans1 == 'Y') {
             system("CLS");
 
+            do {
+                choice = menu();
 
-            while (1) {
-                c = 0;
-                switch ((c = _getch())) {
-
-
-                case KEY_UP:
-                    cout << endl << "Edit" << endl;//key up
+                switch (choice) {
+                case '1':
+                    cout << "Please enter a number: ";
+                    cin >> number;
+                    insert(head, last, number);
                     break;
 
-                case KEY_DOWN:
-                    cout << endl << "Restart" << endl;   // key down
+                case 2:
+                    remove(head, last);
                     break;
+
+                case 3:
+                    showList(head);
+                    break;
+
+                case 4:
+                    cout << "System exit" << endl;
                 }
-            }
 
+            } while (choice != '4');
 
         }
         else {
