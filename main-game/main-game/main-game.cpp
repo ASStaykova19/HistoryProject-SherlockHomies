@@ -1,9 +1,11 @@
-#include <iostream>
+﻿
+#include<iostream>
 #include<iomanip>
 #include<conio.h>
 #include<stdlib.h>
 #include <string>
 #include <windows.h>
+#include<math.h>
 
 
 using namespace std;
@@ -11,38 +13,53 @@ using namespace std;
 
 #define KEY_UP 72
 #define KEY_DOWN 80
-#define RED
+
 
 void ClearArea() {
     system("CLS");
 }
+
+
+
+
 
 int main() {
 
     int year;
     int c = 0;
     int p = 0;
+    
+    int a[10], n, i;
+
+    long long binary, y, b, k = 0, gray = 0;
+
     string options[2] = { "-----> Edit", "-----> Restart" };
-    char ans;
+    char ans1, ans2;
+    
+
 
     cout << "Enter the year here -----> ";
     cin >> year;
+    n = year;
+    
+
+    
+
+
 
     if (year > 0) {
 
         system("CLS");
         cout << "Year: " << year << endl;
-        cout << "fdf" << endl;/*tuka shte e grey code funkciqta*/
 
 
-        cout << endl;
-        cout << endl;
         cout << endl;
 
 
 
         if (year == 1492 || year == 1346 || year == 1914 || year == 1939 || year == 1945 || year == 1957) {
             cout << "So there is your year:" << year << endl;
+            cout << endl;
 
             if (year == 1492) {
                 cout << "In 1492, Christopher Columbus discovered America" << endl;
@@ -74,7 +91,7 @@ int main() {
 
         else if (year == 681 || year == 855 || year == 864 || year == 1762 || year == 1878 || year == 1870 || year == 1885) {
             cout << "So there is your year:" << year << endl;
-
+            cout << endl;
             if (year == 681) {
                 cout << "681 - The first Bulgarian state was created" << endl;
             }
@@ -111,7 +128,50 @@ int main() {
         }
 
 
+        cout << endl;
+        cout << endl;
+        cout << endl;
 
+
+        cout << "Do you want to see binary and Gray code of the year   Y/N :  ";
+        cin >> ans2;
+
+        cout << endl;
+
+        if (ans2 == 'Y' || ans2 == 'y') {
+
+
+
+
+            for (i = 0; n > 0; i++) {
+                a[i] = n % 2;
+                n = n / 2;
+            }
+            cout << "Binary: ";
+            for (i = i - 1; i >= 0; i--) {
+                cout << a[i];
+            }
+
+            cout << endl;
+
+            cout << "Enter the binary number: " << endl;
+            cin >> binary;
+
+            while (binary != 0) {
+
+                y = binary % 10;
+                binary = binary / 10;
+                b = binary % 10;
+
+                if ((y && !b) || (!y && b))
+                    gray = gray + pow(10, k);
+                k++;
+            }
+
+            cout << endl;
+            cout << "Grey code: " << gray;
+
+        }
         cout << endl;
         cout << endl;
         cout << endl;
@@ -120,9 +180,9 @@ int main() {
 
 
         cout << "Do you want to continue? Y/N    Answear:";
-        cin >> ans;
+        cin >> ans1;
 
-        if (ans == 'Y') {
+        if (ans1 == 'Y') {
             system("CLS");
 
 
@@ -142,6 +202,13 @@ int main() {
             }
 
 
+        }
+        else {
+
+            cout << endl;
+
+            cout << "Ok, thank you for using our program <3" << endl;
+            Sleep(3000);
         }
 
     }
