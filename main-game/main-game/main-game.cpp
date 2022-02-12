@@ -10,8 +10,6 @@
 using namespace std;
 
 
-#define KEY_UP 72
-#define KEY_DOWN 80
 
 struct node {
     int number;
@@ -37,10 +35,10 @@ bool isEmpty(node* head) {
 
 char menu() {
     char choice;
-    cout << "Menu" << endl;
-    cout << "1. Add an item" << endl;
-    cout << "2. Remove an item" << endl;
-    cout << "3. Show the list" << endl;
+    cout << "Add events" << endl;
+    cout << "1. Add an event" << endl;
+    cout << "2. Remove an event" << endl;
+    cout << "3. Show the list of the events" << endl;
     cout << "4. Exit" << endl;
 
     cin >> choice;
@@ -123,17 +121,17 @@ int main() {
 
     long long binary, y, b, k = 0, gray = 0;
 
-    string options[2] = { "-----> Edit", "-----> Restart" };
+
     char ans1, ans2;
-    
+
 
 
     cout << "Enter the year here -----> ";
     cin >> year;
     n = year;
-    
 
-    
+
+
 
 
 
@@ -168,7 +166,7 @@ int main() {
             }
 
             if (year == 1945) {
-                cout << "1945 ?tomic bombs in Hiroshima and Nagasaki" << endl;
+                cout << "1945 Atomic bombs in Hiroshima and Nagasaki" << endl;
             }
 
             if (year == 1957) {
