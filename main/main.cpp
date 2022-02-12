@@ -76,17 +76,17 @@ void mainMenu()
 	while (exitProgram != false)
 	{
 		// Main menu options
-		outputPosition(43, 14);
+		outputPosition(41, 14);
 		color(colorNumber[0]);
-		cout << "Play"<<endl;
+		cout << "S t a r t"<<endl;
 		
-		outputPosition(43, 16);
+		outputPosition(41, 16);
 		color(colorNumber[1]);
-		cout << "Help"<<endl;
+		cout << "H e l p"<<endl;
 
-		outputPosition(43, 18);
+		outputPosition(41, 18);
 		color(colorNumber[2]);
-		cout << "Close";
+		cout << "C l o s e";
 
 
 
