@@ -64,6 +64,7 @@ void rules()
 
 
 
+
 void mainMenu()
 {
 	int colorNumber[] = { 7, 7, 7, 7 };
@@ -87,6 +88,9 @@ void mainMenu()
 		color(colorNumber[2]);
 		cout << "Close";
 
+
+
+
 		outputPosition(25, 3);
 		color(colorNumber[3]); 
 		cout << " ___, ,  _,    _   ,_   _,, ,  ___,   , _,"<<endl;
@@ -99,6 +103,64 @@ void mainMenu()
 		outputPosition(25, 6);
 		color(colorNumber[3]);
 		cout << "  ' ' `   `    '  `'  `  `' ` '    '     ` ";
+
+
+
+		outputPosition(6, 7);
+		color(colorNumber[3]);
+		cout << "/\\                                                                         /\\ " << endl;
+		outputPosition(0, 8);
+		color(colorNumber[3]);
+		cout << "     |  |                                                                       |  |" << endl;
+		outputPosition(0, 9);
+		color(colorNumber[3]);
+		cout << "    /----\\                                                                     /----\\" << endl;
+		outputPosition(0, 10);
+		color(colorNumber[3]);
+		cout << "   [______]                                                                   [______]" << endl;
+		outputPosition(0, 11);
+		color(colorNumber[3]);
+		cout << "    |    |         _____                                         _____         |    |" << endl;
+		outputPosition(0, 12);
+		color(colorNumber[3]);
+		cout << "    |[]  |        [     ]                                       [     ]        |  []|" << endl;
+		outputPosition(0, 13);
+		color(colorNumber[3]);
+		cout << "    |    |       [_______][ ][ ][ ][                 ][ ][ ][ ][_______]       |    |" << endl;
+		outputPosition(0, 15);
+		color(colorNumber[3]);
+		cout << "    |    [ ][ ][ ]|     |  ,--------                 --------,  |     |[ ][ ][ ]    |" << endl;
+		outputPosition(0, 17);
+		color(colorNumber[3]);
+		cout << "    |             |     |/'    ____.                 .____    '\\|     |             |" << endl;
+		outputPosition(0, 19);
+		color(colorNumber[3]);
+		cout << "     \\  []        |     |    /'    |                 |    '\\    |     |         [] /" << endl;
+		outputPosition(0, 20);
+		color(colorNumber[3]);
+		cout << "      |      []   |     |   |o     |                 |     o|   |     |  []       |" << endl;
+		outputPosition(0, 21);
+		color(colorNumber[3]);
+		cout << "      |           |  _  |   |     _|                 |_     |   |  _  |           |" << endl;
+		outputPosition(0, 22);
+		color(colorNumber[3]);
+		cout << "      |   []      | (_) |   |    (_|                 |_)    |   | (_) |       []  |" << endl;
+		outputPosition(0, 23);
+		color(colorNumber[3]);
+		cout << "      |           |     |   |     (|                 |)     |   |     |           |" << endl;
+		outputPosition(0, 24);
+		color(colorNumber[3]);
+		cout << "      |           |     |   |      |                 |      |   |     |           |" << endl;
+		outputPosition(0, 25);
+		color(colorNumber[3]);
+		cout << "    /''           |     |   |o     |                 |     o|   |     |           ''\\" << endl;
+		outputPosition(0, 26);
+		color(colorNumber[3]);
+		cout << "   [_____________[_______]--'------'                 '------'--[_______]_____________]" << endl;
+	
+
+
+
 
 		key = _getch();
 
