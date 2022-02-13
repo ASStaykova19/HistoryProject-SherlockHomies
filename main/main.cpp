@@ -34,6 +34,19 @@ void outputPosition(int x, int y)
 void printOutRules()
 {
 	// Print rules
+	outputPosition(39, 2);;
+	cout << "Instructions" ;
+	outputPosition(20, 10);
+	cout << "1.Navigation through the program is made by pressing the W and S buttons.";
+	outputPosition(20, 12);
+	cout << "2.";
+	outputPosition(20, 14);
+	cout << "3.";
+	outputPosition(20, 16);
+	cout << "4.";
+	outputPosition(20, 18);
+	cout << "5.";
+
 }
 void rules()
 {
@@ -44,7 +57,7 @@ void rules()
 	{
 		printOutRules();
 
-		outputPosition(60, 23);
+		outputPosition(70, 33);
 		color(14);
 		cout << "BACK TO MAIN MENU"<<endl;
 
