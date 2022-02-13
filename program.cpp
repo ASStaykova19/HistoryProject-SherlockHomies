@@ -5,7 +5,7 @@
 #include <string>
 #include <windows.h>
 #include<math.h>
-#include "mainMain.h"
+#include "program.h"
 
 using namespace std;
 
