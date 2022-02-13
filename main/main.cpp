@@ -39,13 +39,13 @@ void printOutRules()
 	outputPosition(20, 10);
 	cout << "1.Navigation through the program is made by pressing the W and S buttons.";
 	outputPosition(20, 12);
-	cout << "2.";
+	cout << "2.Enter the year using the keypad";
 	outputPosition(20, 14);
-	cout << "3.";
+	cout << "3.If you want to see binary and Gray code type Y";
 	outputPosition(20, 16);
-	cout << "4.";
+	cout << "4.If you want to continue editing, press Y again";
 	outputPosition(20, 18);
-	cout << "5.";
+	cout << "5.To work with editing, type the number of the option and press enter";
 
 }
 void rules()
