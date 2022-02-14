@@ -28,17 +28,6 @@ bool isEmpty(node* head) {
 
 
 
-
-bool isEmpty(node* head) {
-    if (head == NULL) {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-
-
 char menu() {
     char choice;
     cout << "Add events" << endl;
@@ -113,7 +102,7 @@ void ClearArea() {
 
 
 
-int main() {
+void mainGame() {
 
     int year;
     int c = 0;

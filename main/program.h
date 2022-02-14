@@ -23,4 +23,5 @@ void remove(node* head, node*& last);
 void showList(node* current);
 
 
-void ClearArea()
+void ClearArea();
+void mainGame();

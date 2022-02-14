@@ -3,7 +3,7 @@
 #include <conio.h>
 #include <stdlib.h>
 #include <iomanip>
-
+#include "program.h"
 
 using namespace std;
 // Initializing mazes' sizes for the different difficulties
@@ -197,7 +197,7 @@ void mainMenu()
 			if (counter == 1)
 			{
 				system("CLS");
-			
+				mainGame();
 
 			}
 
