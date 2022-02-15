@@ -3,10 +3,8 @@
 #include <conio.h>
 #include <stdlib.h>
 #include <iomanip>
-#include "program.h"
-
+#include "program.cpp"
 using namespace std;
-
 
 void color(int color)
 {
@@ -36,7 +34,7 @@ void printOutRules()
 {
 	// Print rules
 	outputPosition(39, 2);;
-	cout << "Instructions" ;
+	cout << "Instructions";
 	outputPosition(2, 10);
 	cout << "1.Navigation through the program is made by pressing the W and S buttons.";
 	outputPosition(2, 12);
@@ -49,6 +47,7 @@ void printOutRules()
 	cout << "5.To work with editing, type the number of the option and press enter";
 
 }
+
 void rules()
 {
 	char key;
@@ -60,7 +59,7 @@ void rules()
 
 		outputPosition(70, 33);
 		color(14);
-		cout << "BACK TO MAIN MENU"<<endl;
+		cout << "BACK TO MAIN MENU" << endl;
 
 		key = _getch();
 
@@ -76,9 +75,6 @@ void rules()
 
 }
 
-
-
-
 void mainMenu()
 {
 	int colorNumber[] = { 7, 7, 7, 7 };
@@ -86,30 +82,25 @@ void mainMenu()
 	char key;
 	bool exitProgram = true;
 
-
 	while (exitProgram != false)
 	{
 		// Main menu options
 		outputPosition(41, 14);
 		color(colorNumber[0]);
-		cout << "S t a r t"<<endl;
-		
-		
+		cout << "S t a r t" << endl;
 
 		outputPosition(41, 16);
 		color(colorNumber[1]);
-		cout << "H e l p"<<endl;
+		cout << "H e l p" << endl;
 
 		outputPosition(41, 18);
 		color(colorNumber[2]);
 		cout << "C l o s e";
 
 
-
-
 		outputPosition(25, 3);
-		color(colorNumber[3]); 
-		cout << " ___, ,  _,    _   ,_   _,, ,  ___,   , _,"<<endl;
+		color(colorNumber[3]);
+		cout << " ___, ,  _,    _   ,_   _,, ,  ___,   , _," << endl;
 		outputPosition(25, 4);
 		color(colorNumber[3]);
 		cout << "' | |_|,/_,   '|\\  |_) /  |_|,' | \\  / /_," << endl;
@@ -119,7 +110,6 @@ void mainMenu()
 		outputPosition(25, 6);
 		color(colorNumber[3]);
 		cout << "  ' ' `   `    '  `'  `  `' ` '    '     ` ";
-
 
 
 		outputPosition(6, 7);
@@ -173,13 +163,8 @@ void mainMenu()
 		outputPosition(0, 26);
 		color(colorNumber[3]);
 		cout << "   [_____________[_______]--'------'                 '------'--[_______]_____________]" << endl;
-	
-
-
-
 
 		key = _getch();
-
 		// Move up through the menu
 		if (key == 'w' && (counter >= 2 && counter <= 5))
 		{
@@ -193,7 +178,7 @@ void mainMenu()
 		// Select option
 		if (key == '\r')
 		{
-			// Play option
+			// Start option
 			if (counter == 1)
 			{
 				system("CLS");
