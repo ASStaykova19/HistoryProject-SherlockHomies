@@ -6,7 +6,7 @@
 #include "program.h"
 
 using namespace std;
-// Initializing mazes' sizes for the different difficulties
+
 
 void color(int color)
 {
@@ -193,7 +193,7 @@ void mainMenu()
 		// Select option
 		if (key == '\r')
 		{
-			// Choosing mode option
+			// Play option
 			if (counter == 1)
 			{
 				system("CLS");
