@@ -118,12 +118,7 @@ void mainGame() {
     cin >> year;
     num = year;
 
-    if (year < 0) {
-        cout << "You have entered an invalid input! Please try again!" << endl;
-        cout << endl;
-        cout << "Plase, enter the year you want to learn about: ";
-        cin >> year;
-    }
+   
 
     if (year > 0) {
 
@@ -193,6 +188,9 @@ void mainGame() {
             }
         }
 
+        else if(year <= 0) {
+            cout << "No events have been added to this date" << endl;
+        }
         else {
             cout << "No events have been added to this date" << endl;
         }
