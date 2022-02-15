@@ -5,6 +5,7 @@
 #include <string>
 #include <windows.h>
 #include <math.h>
+
 using namespace std;
 
 struct node {
@@ -67,6 +68,8 @@ void remove(node* head, node*& last) {//remove elements
     if (head == last) {
         delete head;
         cout << "You succesfully deleted that year" << endl;
+        cout << endl;
+        cout << endl;
 
     }
     else {
@@ -74,7 +77,8 @@ void remove(node* head, node*& last) {//remove elements
         head = head->next;
         delete temp;
         cout << "You succesfully deleted that year" << endl;
-
+        cout << endl;
+        cout << endl;
     }
 
 }
@@ -110,20 +114,25 @@ void mainGame() {
     char ans1, ans2;
 
     cout << "Plase, enter the year you want to learn about: ";
+
     cin >> year;
     num = year;
 
+    if (year < 0) {
+        cout << "You have entered an invalid input! Please try again!" << endl;
+        cout << endl;
+        cout << "Plase, enter the year you want to learn about: ";
+        cin >> year;
+    }
 
     if (year > 0) {
 
         system("CLS");
         cout << "Year: " << year << endl;
 
-
         cout << endl;
         cout << "Еvents that happened in: " << year << endl;
         cout << endl;
-
 
         if (year == 1492 || year == 1346 || year == 1914 || year == 1939 || year == 1945 || year == 1957) {
 
@@ -201,6 +210,7 @@ void mainGame() {
                 arr[i] = num % 2;
                 num = num / 2;
             }
+
             cout << "Binary: ";
 
             for (i = i - 1; i >= 0; i--) {
@@ -248,15 +258,16 @@ void mainGame() {
                     cout << "What happened this year? " << endl;
                     for (int i = 0; i < addedYear.length(); i++) {
 
-                        // Print current character
-                        cout << addedYear[i] << " ";
+                        cin >> addedYear[i];
                     }
                     cout << "You succesfully added this year: " << number;
                     system("CLS");
+                    break;
 
                 case '2':
                     cout << "Which year do you want to remove?  ";
                     cin >> number;
+                    cout << endl;
                     head == last;
                     remove(head, last);
                     break;
@@ -278,7 +289,7 @@ void mainGame() {
         else {
             cout << endl;
             cout << "Ok, thank you for using our program <3" << endl;
-            Sleep(3000);
+            Sleep(6000);
         }
     }
 }

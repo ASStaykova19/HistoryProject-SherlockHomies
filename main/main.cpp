@@ -24,7 +24,6 @@ void outputPosition(int x, int y)
 	position.Y = y;
 	if (SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), position))
 	{
-
 		return;
 	}
 	else {}
@@ -197,6 +196,8 @@ void mainMenu()
 			if (counter == 3)
 			{
 				system("CLS");
+				cout << "Ok, thank you for using our program <3" << endl;
+				Sleep(6000);
 				color(7);
 				exit(-1);
 			}
