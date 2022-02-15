@@ -1,7 +1,7 @@
 # Sherlock Homies
 
  <p align = "center">
-  <img width = "496" height = "379" src = "Documents/Logo/SH_Logo.png">
+  <img width = "496" height = "379" src = "Documents/Logo and Diagram/SH_Logo.png">
  </p>
  
  

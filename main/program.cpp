@@ -16,7 +16,7 @@ struct node {
     node* next;
 };
 
-bool isEmpty(node* head) {
+bool isEmpty(node* head) { //check if the list is empty
     if (head == NULL) {
         return true;
     }
@@ -28,7 +28,7 @@ bool isEmpty(node* head) {
 
 
 
-char menu() {
+char menu() { //edit menu
     char choice;
     cout << "Add events" << endl;
     cout << "1. Add an event" << endl;
@@ -42,7 +42,7 @@ char menu() {
 
 
 
-void insertAsFirstElement(node* head, node*& last, int number) {
+void insertAsFirstElement(node* head, node*& last, int number) { //function to add 1st element
     node* temp = new node;
     temp->number = number;
     temp->next = NULL;
@@ -50,7 +50,7 @@ void insertAsFirstElement(node* head, node*& last, int number) {
     last = temp;
 }
 
-void insert(node* head, node*& last, int number) {
+void insert(node* head, node*& last, int number) { // add elements
     if (isEmpty(head)) {
 
         insertAsFirstElement(head, last, number);
@@ -66,7 +66,7 @@ void insert(node* head, node*& last, int number) {
     }
 }
 
-void remove(node* head, node*& last) {
+void remove(node* head, node*& last) {//remove elements
     if (isEmpty(head)) {
         cout << "The list is already empty" << endl;
     }
@@ -82,7 +82,7 @@ void remove(node* head, node*& last) {
     }
 }
 
-void showList(node* current) {
+void showList(node* current) {//show the list
     if (isEmpty(current)) {
         cout << "The list is empty" << endl;
     }
@@ -95,7 +95,7 @@ void showList(node* current) {
     }
 }
 
-void ClearArea() {
+void ClearArea() { //clear console
     system("CLS");
 }
 
@@ -105,17 +105,16 @@ void ClearArea() {
 void mainGame() {
 
     int year;
-    int c = 0;
-    int p = 0;
+   
 
     node* head = NULL;
     node* last = NULL;
     char choice;
     int number;
 
-    int a[10], n, i;
+    int arr[10], num, i;
 
-    long long binary, y, b, k = 0, gray = 0;
+    long long binary, a1, a2, k = 0, gray = 0;
 
 
     char ans1, ans2;
@@ -124,7 +123,7 @@ void mainGame() {
 
     cout << "Enter the year here -----> ";
     cin >> year;
-    n = year;
+    num = year;
 
 
 
@@ -222,18 +221,18 @@ void mainGame() {
 
         cout << endl;
 
-        if (ans2 == 'Y' || ans2 == 'y') {
+        if (ans2 == 'Y' || ans2 == 'y') {//gray code
 
 
 
 
-            for (i = 0; n > 0; i++) {
-                a[i] = n % 2;
-                n = n / 2;
+            for (i = 0; num > 0; i++) {
+                arr[i] = num % 2;
+                num = num / 2;
             }
             cout << "Binary: ";
             for (i = i - 1; i >= 0; i--) {
-                cout << a[i];
+                cout << arr[i];
             }
 
             cout << endl;
@@ -243,17 +242,17 @@ void mainGame() {
 
             while (binary != 0) {
 
-                y = binary % 10;
+                a1 = binary % 10;
                 binary = binary / 10;
-                b = binary % 10;
+                a2 = binary % 10;
 
-                if ((y && !b) || (!y && b))
+                if ((a1 && !a2) || (!a1 && a2))
                     gray = gray + pow(10, k);
                 k++;
             }
 
             cout << endl;
-            cout << "Gray code: " << gray;
+            cout << "Gray code: " << gray;//gray code
 
         }
         cout << endl;
@@ -269,7 +268,7 @@ void mainGame() {
         if (ans1 == 'Y') {
             system("CLS");
 
-            do {
+            do {//edit menu
                 choice = menu();
 
                 switch (choice) {
@@ -279,15 +278,15 @@ void mainGame() {
                     insert(head, last, number);
                     break;
 
-                case 2:
+                case '2':
                     remove(head, last);
                     break;
 
-                case 3:
+                case '3':
                     showList(head);
                     break;
 
-                case 4:
+                case '4':
                     cout << "System exit" << endl;
                 }
 
