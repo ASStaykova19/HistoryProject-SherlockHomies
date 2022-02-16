@@ -9,7 +9,7 @@
   About our program ™ 
  </h1>
    <h3>
-    Our program is console app in C++ that shows important dates and years in history.
+    Our program is console app in C++ that shows important years in history.
    </h3>
 
 
