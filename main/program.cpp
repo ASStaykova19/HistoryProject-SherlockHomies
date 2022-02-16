@@ -85,6 +85,8 @@ void remove(node* head, node*& last) {//remove elements
 void showList(node* current) {//show the list
     if (isEmpty(current)) {
         cout << "The list is empty" << endl;
+        cout << endl;
+        cout << endl;
     }
     else {
         cout << "The list contains: " << endl;
