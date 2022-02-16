@@ -12,7 +12,11 @@ struct node {
     int number;
     node* next;
 };
-
+void color(int color);
+void outputPosition(int x, int y);
+void printOutRules();
+void rules();
+void mainMenu();
 bool isEmpty(node* head);
 char menu();
 void insertAsFirstElement(node* head, node*& last, int number);
